@@ -1,0 +1,8 @@
+FROM mcr.microsoft.com/playwright:focal
+
+COPY ./playwright/package.json /playwright/package.json
+WORKDIR /playwright
+
+RUN npm install
+# RUN npx playwright install chromium
+RUN npx playwright install

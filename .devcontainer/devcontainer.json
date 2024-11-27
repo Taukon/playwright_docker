@@ -1,0 +1,8 @@
+{
+    "name": "playwright",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "playwright_ts",
+    "workspaceFolder": "/playwright"
+}

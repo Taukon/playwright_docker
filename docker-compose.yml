@@ -1,0 +1,16 @@
+volumes:
+  node_modules:
+
+services:
+
+  playwright_ts:
+    container_name: playwright_ts
+    build: ./playwright_ts
+    tty: true
+    network_mode: host  # use host network
+    ports:
+      - 9323:9323
+    volumes:
+      - node_modules:/playwright/node_modules
+      - ./playwright_ts/playwright:/playwright
+    # command: bash
